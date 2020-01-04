@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>United States Departure Narrative</title>
+        <style>
+            .dialogue-window {
+                margin-top:10%;
+                margin-left:25%;
+                margin-right:25%;
+                border:5px darkblue ridge;
+                border-top: 15px blue solid;
+                padding:10px;
+                padding-top:12px;
+                color:black;
+                background-color:rgb(149, 188, 230);
+                position:relative;
+
+                font-family:sans-serif;
+            }
+            
+            #backgroung-image {
+                z-index:-1;
+                position:relative;
+                left:0px;
+                bottom:0px;
+            }
+            
+            #openning {
+                z-index:5;
+                position:relative;
+                bottom:600px;
+                
+            }
+            
+            #closing1 {
+                z-index:6;
+                position:realtive;
+                bottom:700px;
+                display: none;
+            }
+            
+            #closing2 {
+                z-index:6;
+                position:realtive;
+                bottom:700px;
+                display: none;
+            }
+            
+            #continue {
+                position:relative;
+                bottom:650px;
+                left:45%;
+                display: "none";
+                z-index:3;
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+
+            <img id='background-image' class="still" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTBk9BlQ8tusYBtVwv2KxndBUElORznfniJ9R0ICzJbIeLasjJGA&s" width="100%">
+            
+            <div class="dialogue-window" id="openning">
+                <p>
+                    You arrive at Benard's Star. Two asteroid belts orbit the sun. After scanning both asteroid belts you have discovered the outer one has more ice bodies than the inner belt, but less metallic objects. Which asteroid belt will you set up your industial facilities in?
+                </p>
+                
+                <button id="choice1" class="choice" onclick="outerasteroidsShow()">Outer Asteroid Belt</button>
+                <button id="choice2" class="choice" onclick="innerasteroidsShow()">Inner Asteroid Belt</button>
+        
+            </div>
+        
+            <div class="dialogue-window" id="closing1">
+            <p>
+                You chose the outer-asteroid belt as your industrial hub of <span id="star-name">Bernard's Star.</span>
+            </p>
+            <ul>
+                <li>50% increased avaliable Hydrogen</li>
+                <li>25% decreased avaliable Metals</li>
+            </ul>    
+            </div>
+        
+           <div class="dialogue-window" id="closing2">
+            <p>
+                You chose the inner-asteroid belt as your industrial hub of <span id="star-name">Bernard's Star.</span>
+            </p>
+            <ul>
+                <li>50% decreased avaliable Hydrogen</li>
+                <li>25% increased avaliable Metals</li>
+            </ul>    
+            </div>
+        
+            <button id="continue" onclick="nextPage()"><a href="">Continue</a></button>
+        
+    <script>
+        var miningTargets = "";
+        
+        function outerasteroidsShow() {
+            var x = document.getElementById("closing1");
+            var y = document.getElementById("continue");
+            var z = document.getElementById("closing2");
+            if (x.style.display === "none" && z.style.display === "none") {
+                x.style.display = "block";
+                y.style.display = "inline";
+            } else {
+                x.style.display = "none";
+            }
+            
+    }
+        function innerasteroidsShow() {
+            var x = document.getElementById("closing2");
+            var y = document.getElementById("continue");
+            var z = document.getElementById("closing1");
+            if (x.style.display === "none" && z.style.display === "none") {
+                x.style.display = "block";
+                y.style.display = "inline";
+            } else {
+                x.style.display = "none";
+            }
+            
+    }
+        function nextPage() {
+            
+        }
+    </script>
+    </body>
+</html>
