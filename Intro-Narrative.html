@@ -90,49 +90,12 @@
             <button id="continue" onclick="nextPage()"><a href="">Continue</a></button>
         
     <script>
-        
-        var storePersonality = function() {
-            
-            var x;
-            var y;
-            x = document.getElementById("curosity");
-            y = document.getElementById("naivetity");
-            
-            
-        }
-        
-        var dialogueProgress = function(currentStep) {
-            //choice a
-            var optionA = document.getElementById("Step" + currentStep + "a");
-            var optionAShown = window.getComputedStyle(optionA);
-           
-            
-            //choice b
-            var optionB = document.getElementById("Step" + currentStep + "b");
-            var optionBShown = window.getComputedStyle(optionB);
-            
-            //computation   
-             var button1Pressed = document.getElementById("choice1").addEventListener("click", function(){
-                 if (optionAShown === "none" && optionBShown === "none") {
-                    optionAShown = "block";
-                    optionBShown = "inline";
-                }  
-             });
-            var button2Pressed = document.getElementById("choice2").addEventListener("click", function() {
-                 if (optionAShown === "none" && optionBShown === "none") {
-                    optionAShown = "inline";
-                    optionBShown = "block";
-                } 
-            });
-        }
-        
-        
     
         
         function outerasteroidsShow() {
-            var x = document.getElementById("Step2b");
+            var x = document.getElementById("Step1b");
             var y = document.getElementById("continue");
-            var z = document.getElementById("Step2a");
+            var z = document.getElementById("Step1a");
             if (x.style.display === "none" && z.style.display === "none") {
                 x.style.display = "block";
                 y.style.display = "inline";
@@ -142,9 +105,9 @@
             
     }
         function innerasteroidsShow() {
-            var x = document.getElementById("Step2b");
+            var x = document.getElementById("Step1b");
             var y = document.getElementById("continue");
-            var z = document.getElementById("Step2a");
+            var z = document.getElementById("Step1a");
             if (x.style.display === "none" && z.style.display === "none") {
                 x.style.display = "block";
                 y.style.display = "inline";
