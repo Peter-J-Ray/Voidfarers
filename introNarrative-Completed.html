@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>United States Departure Narrative</title>
+        <style>
+            .dialogue-window {
+                margin-top:10%;
+                margin-left:25%;
+                margin-right:25%;
+                border:5px darkblue ridge;
+                border-top: 15px blue solid;
+                padding:10px;
+                padding-top:12px;
+                color:black;
+                background-color:rgb(149, 188, 230);
+                position:relative;
+
+                font-family:sans-serif;
+            }
+            
+            #background-image {
+                z-index:-1;
+                position:relative;
+                left:0px;
+                bottom:0px;
+            }
+            
+            #openning {
+                z-index:5;
+                position:relative;
+                bottom:600px;
+                
+            }
+            
+            .step {
+                z-index:6;
+                position:relative;
+                bottom:700px;
+            }
+            
+            #continue {
+                position:relative;
+                bottom:650px;
+                left:45%;
+                display: none;
+                z-index:3;
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+            <img id='background-image' class="still" src="data:image/jpeg;base64,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" width="100%">
+            
+            <div class="dialogue-window" id="openning" >
+                <p>
+                    You wake up. You feel nothing.... You are nothing.... You try to remember why, or how you arrived at this state. Are you dead? As this thought flashes through your mind, you open your eyes to see a faint glow ahead. Do you head towards the glow, or away?
+                </p>
+                
+                <button id="choice1" class="choice" onclick="dialogueProgressionA(2)">Try to move towards the Light</button>
+                <button id="choice2" class="choice" onclick="dialogueProgressionB(2)">Try to move away from the Light</button>
+        
+            </div>
+        
+            <div class="dialogue-window step" id="Step2a" style="display:none;">
+            <ul>
+                <li> <span id="curosity">10</span>% increase in curosity</li>
+                <li><span id="caution">-10</span>% decrease in caution<li>
+            </ul> 
+            <p>
+               You try to step towards the light, but you cannot move. In fascination, you watch the glow grow brighter and brighter until it enevelops you. Suddenly you find your bearings. You look at a sparsely furnished room, with a large glass window facing you. A man sits behind a metal table, looking intently at you. Do you wait for him to speak, or do you intitate the conversation?
+            </p>
+               
+                <button id="choice3" class="choice" onclick="dialogueProgressionA(3)">Intitate the Conversation</button>
+                <button id="choice4" class="choice" onclick="dialogueProgressionB(3)">Let the man intitate the Conversation</button>
+            </div>
+        
+           <div class="dialogue-window step" id="Step2b" style="display:none;">
+            <ul>
+                <li> <span id="curosity">-10</span>% decrease in curosity</li>
+                <li><span id="caution">10</span>% increase in caution<li>
+            </ul> 
+            <p>
+               You try to back away the light, but you are frozen in place. In horror, you watch the glow grow brighter and brighter until it enevelops you. Suddenly you find your bearings. You look at a sparsely furnished room, with a large glass window facing you. A man sits behind a metal table, looking intently at you. Do you wait for him to speak, or do you intitate the conversation?
+            </p>
+               
+                <button id="choice3" class="choice" onclick="dialogueProgressionA(2)">Intitate the Conversation</button>
+                <button id="choice4" class="choice" onclick="dialogueProgressionB(2)">Let the man intitate the Conversation</button>
+    
+            </div>
+        
+           <!-- <button id="continue" onclick="nextPage()"><a href="">Continue</a></button> -->
+        
+    <script>
+        
+        var dialogueProgressionA = function(currentStep) {
+            //choice a
+            var optionA = document.getElementById("Step" + currentStep + "a"); 
+            
+            //choice b
+            var optionB = document.getElementById("Step" + currentStep + "b");
+            
+            //computation   
+            if (optionA.style.display == "none" && optionB.style.display == "none") {
+                    optionA.style.display = "block";
+                    optionB.style.display = "none";
+            } else {
+                optionA.style.display = "none";
+            }
+        };
+        
+        var dialogueProgressionB = function(currentStep) {
+            //choice a
+            var optionA = document.getElementById("Step" + currentStep + "a"); 
+            
+            //choice b
+            var optionB = document.getElementById("Step" + currentStep + "b");
+            
+            //computation   
+            if (optionA.style.display == "none" && optionB.style.display == "none") {
+                    optionB.style.display = "block";
+                    optionA.style.display = "none";
+            } else {
+                optionB.style.display = "none";
+            }
+        };
+        
+        
+        
+        /*
+        function nextPage() {
+            
+        }
+        
+          var storePersonality = function() {
+            
+            var x;
+            var y;
+            x = document.getElementById("curosity");
+            y = document.getElementById("caution");
+            
+            
+        }
+        
+        */
+    </script>
+    </body>
+</html>
