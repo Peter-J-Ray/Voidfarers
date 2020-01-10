@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>United States Departure Narrative</title>
+        <style>
+            .dialogue-window {
+                margin-top:10%;
+                margin-left:25%;
+                margin-right:25%;
+                border:5px darkblue ridge;
+                border-top: 15px blue solid;
+                padding:10px;
+                padding-top:12px;
+                color:black;
+                background-color:rgb(149, 188, 230);
+                position:relative;
+
+                font-family:sans-serif;
+            }
+            
+            #background-image {
+                z-index:-1;
+                position:relative;
+                left:0px;
+                bottom:0px;
+            }
+            
+            .step {
+                position:relative;
+                bottom:700px;
+            }
+            
+            #continue {
+                position:relative;
+                bottom:650px;
+                left:45%;
+                display: none;
+                z-index:3;
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+            <img id='background-image' class="still" src = "" width="100%">
+            
+            <div class="dialogue-window step" id="openning Step1a" style="display: block; bottom: 600px">
+                <p>
+                  
+                </p>
+                
+                <button class="choice" onclick="dialogueProgressionA(2)"></button>
+                <button class="choice" onclick="dialogueProgressionB(2)"></button>
+        
+            </div>
+        
+            <div class="dialogue-window step" id="Step2a" style="display: block; bottom: 600px">
+                <p>
+                
+                </p>
+                
+                <button class="choice" onclick="dialogueProgressionA(3)"></button>
+                <button class="choice" onclick="dialogueProgressionB(3)"></button>
+            </div>
+        
+            <div class="dialogue-window step" id="Step2b" style="display: block; bottom: 600px">
+                <p>
+                
+                </p>
+                
+                <button class="choice" onclick="dialogueProgressionC(3)"></button>
+                <button class="choice" onclick="dialogueProgressionD(3)"></button>
+            </div>
+        
+             <div class="dialogue-window step" id="Step3a" style="display: block; bottom: 600px">
+                <p>
+                
+                </p>
+                
+                <button class="choice" onclick="dialogueProgressionA(4)"></button>
+            </div>
+        
+             <div class="dialogue-window step" id="Step3b" style="display: block; bottom: 600px">
+                <p>
+                
+                </p>
+                
+                <button class="choice" onclick="dialogueProgressionB(4)"></button>
+            </div>
+        
+             <div class="dialogue-window step" id="Step3c" style="display: block; bottom: 600px">
+                <p>
+                
+                </p>
+                
+                <button class="choice" onclick="dialogueProgressionC(4)"></button>
+            </div>
+        
+            <div class="dialogue-window step" id="Step3d" style="display: block; bottom: 600px">
+                <p>
+                
+                </p>
+                
+                <button class="choice" onclick="dialogueProgressionD(4)"></button>
+            </div>
+        
+                        
+        
+           <button id="continue" onclick="nextPage()"><a href="">Continue</a></button> 
+        
+    <script>
+        
+        var magicEraser = function(currentStep) {
+            var lastStep = currentStep - 1;
+            
+            var previousStepA = [];
+            previousStepA.push("Step" + lastStep + "a");
+            
+            var previousStepB = [];
+            previousStepB.push("Step" + lastStep + "b");
+            
+            var previousStepC = [];
+            previousStepC.push("Step" + lastStep + "c");
+            
+            var previousStepD = [];
+            previousStepD.push("Step" + lastStep + "d");
+            
+            if (previousStepA.style.display === undefined && previousStepB.style.display !== undefined) {
+                document.getElementById(previousStepB[0]).style.display = "none";
+                
+            } else if (previousStepA.style.display !== undefined && previousStepB.style.display === undefined) {
+                document.getElementById(previousStepA[0]).style.display = "none";
+                
+            } else if (previousStepC.style.display !== undefined && previousStepD.style.display === undefined) {
+                document.getElementById(previousStepC).style.display = "none";
+                
+            } else if (previousStepC === undefined && previousStepD.style.display !== undefined) {
+                document.getElementById(previousStepD).style.display = "none";
+            }
+            
+            
+            previousStepB.shift();
+            previousStepA.shift();
+        };
+        
+        var dialogueProgressionA = function(currentStep) {
+            //choice a
+            var optionA = document.getElementById("Step" + currentStep + "a"); 
+            optionA.style.zIndex = "0" + currentStep;
+            
+            //computation   
+            optionA.style.display = "block";
+
+            magicEraser(currentStep);
+                
+        };
+        
+        var dialogueProgressionB = function(currentStep) {   
+            //choice b
+            var optionB = document.getElementById("Step" + currentStep + "b");
+            optionB.style.zIndex = "0" + currentStep;
+            
+            //computation   
+            optionB.style.display = "block";
+                    
+            magicEraser(currentStep);
+        };
+        
+        var dialogueProgressionC = function(currentStep) {   
+            //choice b
+            var optionC = document.getElementById("Step" + currentStep + "c");
+            optionC.style.zIndex = "0" + currentStep;
+            
+            //computation   
+            optionC.style.display = "block";
+                    
+            magicEraser(currentStep);
+        };
+        
+        var dialogueProgressionD = function(currentStep) {   
+            //choice b
+            var optionD = document.getElementById("Step" + currentStep + "b");
+            optionD.style.zIndex = "0" + currentStep;
+            
+            //computation   
+            optionD.style.display = "block";
+                    
+            magicEraser(currentStep);
+        };
+        
+        var longTermStorage = function() {
+            
+        }
+    </script>
+    </body>
+</html>
