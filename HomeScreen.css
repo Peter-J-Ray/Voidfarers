@@ -1,0 +1,108 @@
+/* main body */
+
+body {
+    background-color: black;
+    background-image: url(https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
+    position:relative;
+    font-family: sans-serif;
+    color: cadetblue;
+}
+
+/* ID's */
+
+#title{
+    font-size:90px;
+    text-decoration: underline;
+}
+
+#start-link {
+    margin-left: 20%;
+
+}
+
+#dominationMode {
+    top: 50%;
+    color: darkred;
+    right: 5%;
+}
+
+
+#colonizationMode  {
+    top: 105%;
+    color: darkcyan;
+}
+
+#xenoThreatMode  {
+    top: 160%;
+    right: 50%;
+    color: darkgoldenrod;
+}
+
+#dominationDescription {
+    color: darkred;
+}
+
+#colonizationDescription {
+ color: darkcyan;
+}
+
+#xenoThreatDescription {
+    color: darkgoldenrod;
+}
+
+
+/* CLASS */
+
+.header {
+    font-weight:bold;
+    font-size: 30px;
+
+
+    width:auto;
+    left: 5%;
+    position:relative;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.button {
+    border-color: rgb(14, 19, 59);
+    border-radius: 35px;
+    border-width: 5px;
+    border-style: solid;
+    background-color: rgb(11, 92, 112);
+    text-decoration: none;
+
+    color: cadetblue;  
+    font-weight:bold;
+    font-size: 30px;
+
+    padding: 20px;
+    position: absolute;
+}
+
+
+
+.popupDescription {
+    width: 30%;
+    top: -185px;
+    float:right;
+    margin-right: 23%;
+
+    border: 5px rgb(14, 19, 59) ridge;
+    background-color: rgb(11, 92, 112);
+    height: 50%;
+    border-radius: 10px;
+    padding: 8px;
+
+    font-weight: bold;
+    position: relative;
+}
+
+.mode {
+    float:right; 
+    left: 80%;
+    width: 13%;
+}
