@@ -8,51 +8,67 @@ body {
     color: cadetblue;
 }
 
+
+/* homeScreen */
+
 /* ID's */
 
-#title{
+.homeScreen #title{
     font-size:90px;
     text-decoration: underline;
 }
 
-#start-link {
-    margin-left: 20%;
+/* buttons */
 
-}
+    .homeScreen #start-link {
+        margin-left: 20%;
 
-#dominationMode {
-    top: 50%;
-    color: darkred;
-    right: 5%;
-}
+    }
 
+    .homeScreen #dominationMode {
+        top: 50%;
+        color: darkred;
+        right: 5%;
+    }
 
-#colonizationMode  {
-    top: 105%;
-    color: darkcyan;
-}
+    .homeScreen #dominationMode:hover {
+        color: red
+    }
 
-#xenoThreatMode  {
-    top: 160%;
-    color: darkgoldenrod;
-}
+    .homeScreen #colonizationMode  {
+        top: 105%;
+        color: darkcyan;
+    }
 
-#dominationDescription {
-    color: darkred;
-}
+    .homeScreen #colonizationMode:hover {
+        color: cyan
+    }
 
-#colonizationDescription {
- color: darkcyan;
-}
+    .homeScreen #xenoThreatMode  {
+        top: 160%;
+        color: darkgoldenrod;
+    }
 
-#xenoThreatDescription {
-    color: darkgoldenrod;
-}
+    .homeScreen #xenoThreatMode:hover {
+        color: yellow
+    }
+
+    .homeScreen #dominationDescription {
+        color: darkred;
+    }
+
+    .homeScreen #colonizationDescription {
+     color: darkcyan;
+    }
+
+    .homeScreen #xenoThreatDescription {
+        color: darkgoldenrod;
+    }
 
 
 /* CLASS */
 
-.header {
+.homeScreen .header {
     font-weight:bold;
     font-size: 30px;
 
@@ -62,11 +78,12 @@ body {
     position:relative;
 }
 
-a:hover {
+.homeScreen a:hover {
     cursor: pointer;
+    color: aqua;
 }
 
-.button {
+.homeScreen .button {
     border-color: rgb(14, 19, 59);
     border-radius: 35px;
     border-width: 5px;
@@ -84,7 +101,7 @@ a:hover {
 
 
 
-.popupDescription {
+.homeScreen .popupDescription {
     width: 30%;
     top: -185px;
     float:right;
@@ -100,9 +117,11 @@ a:hover {
     position: relative;
 }
 
-.mode {
+.homeScreen .mode {
     float:right; 
     right:  5%;
     width: 200px;
     height: 30px;
 }
+
+/* ./homeScreen */
