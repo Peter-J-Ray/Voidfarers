@@ -23,25 +23,24 @@ body {
 .index #mainHeader h1 {
     position: relative;
     left: 5%;
-    margin: 1%;
+    margin: 1% 0px;
 }
 
 .index .container2 {
-    top: 21.5%;
-    right: 0%;
+    margin: 10px 150px;
     background: lightblue;
     color: black;
     border: 5px;
     border-style: solid;
     border-color: lightblue;
+    border-radius: 10px;
     width: 55%;
     position: absolute;
-    padding-right: 2.5%;
+    float: left;
 }
 
 .index #welcome {
     font-size: 50px;
-    right: 50%;
 }
 
 .index h2 {
@@ -53,6 +52,7 @@ body {
 }
 
 .index #linksBar {
+    padding 0px;
     position: fixed;
     background: #f4f4f4;
     color: cadetblue;
