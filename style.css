@@ -5,6 +5,7 @@ body {
     font-family: sans-serif;
     color: cadetblue;
     margin: 0;
+    overflow: hidden;
 }
 
 /*-- index --*/
@@ -24,19 +25,8 @@ body {
     position: relative;
     left: 5%;
     margin: 1% 0px;
-}
-
-.index .container2 {
-    margin: 10px 150px;
-    background: lightblue;
-    color: black;
-    border: 5px;
-    border-style: solid;
-    border-color: lightblue;
-    border-radius: 10px;
-    width: 55%;
-    position: absolute;
-    float: left;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .index #welcome {
@@ -48,30 +38,72 @@ body {
 }
 
 .index #textBox {
-    
+
 }
 
 .index #linksBar {
     padding 0px;
-    position: fixed;
+    position: absolute;
     background: #f4f4f4;
     color: cadetblue;
-    font-size: 30px;
+    font-size: 50px;
     border: 3px;
     border-style: solid;
     border-color: cadetblue;
-    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.index #linksBar li {
+    display: inline;
+    font-size: 20px;
+    
 }
 
 .index #linksBar ul {
     margin: 0px;
 }
-.index #fb {list-style: url(Pictures/FB.png);}
+
+.index #patreon {list-style: url(Pictures/Patreon.png);}
 .index #mail {list-style: url(Pictures/Mail.png);}
 .index #github {list-style: url(Pictures/Github.png);}
 .index #bugReport {list-style: url(Pictures/BugReport.png);}
 
+.index #mainFooter {
+    /* margin */
+    margin-left: 20;
+    margin-right: 20;
+    margin-top: 376px;
+    margin-bottom: 0px;
+    
+    border: 10px;
+    border-style: solid;
+    border-color: darkgray;
+    
+    background: black;
+    padding: 0px 20px;
+    position: inherit;
+    
+    /* text */
+    text-align: center;
+    color: lightgray;
+    box-sizing: border-box;
+}
+
 /*-- CLASS --*/
+
+.index .container2 {
+    margin: 50px 0px;
+    background: lightblue;
+    color: black;
+    border: 5px;
+    border-style: solid;
+    border-color: lightblue;
+    border-radius: 10px;
+    width: 80%;
+    float: left;
+    box-sizing: border-box;
+}
 
 .index .container {
     font-family: sans-serif;
@@ -79,15 +111,24 @@ body {
     color: cadetblue;
 }
 
-.index #mainFooter {
-    color: lightgray;
-    margin: 20px 0px;
-    border: 10px;
-    border-style: solid;
-    border-color: darkgray;
-    background: black;
-    padding: 0px 20px;
-    margin-top: 25%;
+/*-- media --*/
+
+@media (max-width: 1000) {
+    
+        .index #mainFooter {
+        margin-top: 450px;
+    }
+}
+
+@media (max-width: 700px) {
+    
+    .index .container2 {
+        width: 100%;
+    } 
+    
+    .index #mainFooter {
+        margin-top: 500px;
+    }
 }
 
 /*-- /index --*/
