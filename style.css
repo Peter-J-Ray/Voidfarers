@@ -113,7 +113,14 @@ body {
 
 /*-- media --*/
 
-@media (max-width: 1000) {
+@media (max-width: 1275px) {
+    
+    .index #mainFooter {
+        margin-top: 400px;
+    }
+}
+
+@media (max-width: 1000px) {
     
         .index #mainFooter {
         margin-top: 450px;
