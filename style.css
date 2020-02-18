@@ -111,6 +111,39 @@ body {
     color: cadetblue;
 }
 
+/*-- button --*/
+
+.index .mode {
+    float:right; 
+    right:  5%;
+    width: 70px;
+    height: 33px;
+}
+
+.index .button {
+    border-color: rgb(14, 19, 59);
+    border-radius: 35px;
+    border-width: 5px;
+    border-style: solid;
+    background-color: rgb(11, 92, 112);
+    list-style: none;
+    
+    padding: 20px;
+    position: absolute;
+    
+    margin-top: 150px;
+}
+
+.index .button a{
+    
+    color: cadetblue;  
+    font-weight:bold;
+    font-size: 200%;
+    text-decoration: none;
+}
+
+/*-- /button --*/
+
 /*-- media --*/
 
 @media (max-width: 1275px) {
