@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>TestWebsite1</title>
+        <link rel="stylesheet" type="text/css" href="mainScreen.css">
+    </head>
+    <body>
+        
+<!--> Div concerning the starsystem in the background of the homescreen<-->  
+     <div id="starSystem">
+         <div class="star" id="Sol"></div>
+         <div class="star" id="Earth"></div>
+         <div class="star" id="Jupiter"></div>
+        
+    </div>   
+
+<!-->Div concerning the top right bar where the elapsed time and time in solar system are displayed<-->  
+    <div id="top_bar">
+        <span class="time" id="elapsed_time">00:00:00</span>  
+        <span class="time" id="time_in_solarSystem">00:00:00</span>
+    </div>
+        
+
+<!-->Div concerning the usual narrative path in html form<-->
+    <div id="narrative_link" class="narrative_page">
+        <div class="narrative_text" id="narrative_intro"></div>
+        
+        <button id="narrative_start_1"></button>
+        <button id="narrative_start_2"></button>
+        
+    </div>
+        
+    <div class="narrative_page" id="narrative_pg1">
+        <div class="narrative_text" id="narrative_mid_1"></div>
+        
+        <button id="narrative_pg_1_continue"></button>
+    </div>
+        
+    <div class="narrative_page" id="narrative_pg2">
+        <div class="narrative_text" id="narrative_mid_2"></div>
+        
+        <button id="narrative_pg_2_continue"></button>
+    </div>
+        
+     <div class="narrative_page" id="narrative_pg3">
+        <div class="narrative_text" id="narrative_end"></div>
+        
+        <button id="narrative_finish">Finish</button>
+    </div>
+        
+   
+<!-->Div concerning the hot bar at the bottom of the screen where the player will have most of his/her interaction with the game<-->
+    <div id="Bottom_Hot_Bar">
+        <span id="toggle_Resource">Total Tonnage: 000,000,000,000</span>
+        
+        <span id="toggle_Research">Total Research: 0000</span>
+        
+        <span id="toggle_starShip"></span>
+        
+        <span id="toggle_starSystem"></span>
+        
+        
+    </div>
+    
+<!-->Togglabe screens for each of the four different core parts of the game<-->
+    <div id="Toggled_Resource_Window"></div>
+    
+    <div id="Toggled_starShip_Window"></div>
+        
+     <div id="Toggled_starSystem_Window"></div>
+        
+     <div id="Toggled_Research_Window"></div>
+
+        
+    <script src="mainScreen.js"></script>
+    </body>
+</html>
