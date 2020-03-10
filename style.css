@@ -291,3 +291,81 @@ body {
 }
 
 /*-- ./homeScreen --*/
+
+/*-- main Screen --*/
+
+/*-- The majority of player input runs through here --*/
+
+/*-- CLASS --*/
+
+.homeScreen .window {
+    display: none;
+    position:absolute; 
+    
+};
+
+.homeScreen .toggle  {
+    text-decoration: none;
+}
+
+.homeScreen .star {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-radius: 50%;
+  position: relative;
+  background: radial-gradient(circle at 50% 120%, rgb(252, 194, 0), rgb(232, 166, 0) 10%, rgb(248, 205, 0) 80%, rgb(231, 189, 0) 100%);
+  /*-- part of the background decoration --*/
+}
+
+/*
+
+.homeScreen .star:before {
+  content: "";
+  position: absolute;
+  top: 1%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 0px, _____, ________ 58%);
+  filter: blur(5px);
+  z-index: 2;
+  /*-- part of the background decoration --*/
+}
+
+*/
+
+/*-- ID'S --*/
+
+.homeScreen #Bottom_Hot_Bar {
+    width: 50%;
+    height: 20%;
+    
+    float:none;
+    position:absolute;
+    left: 25%;
+    bottom: 0%;
+    
+    border-top: 5px solid rgb(19, 10, 30); 
+    border: 10px solid rgb(8, 40, 90);
+}
+
+.homeScreen #toggle_Resource {
+    
+    color: red;
+}
+
+.homeScreen #toggle_Research {
+    
+}
+
+.homeScreen #sol {
+    background-color: yellow;
+    width: 50px;
+    height: 50px;  
+    /*-- part of the background decoration --*/
+}
+
+/*-- /main Screen --*/
